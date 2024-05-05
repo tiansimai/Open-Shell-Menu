@@ -521,7 +521,7 @@ void CStartButton::LoadBitmap( void )
 		m_Size.cx=rc.right+START_ICON_SIZE+2*START_TEXT_PADDING+2*START_BUTTON_PADDING+2*START_BUTTON_OFFSET;
 		m_Size.cy=rc.bottom;
 		if (m_Size.cy<START_ICON_SIZE) m_Size.cy=START_ICON_SIZE;
-		m_Size.cy+=2*START_BUTTON_PADDING+2*START_BUTTON_OFFSET+2;
+		m_Size.cy+=2*START_BUTTON_PADDING+2*START_BUTTON_OFFSET-2;
 		DeleteDC(hdc);
 	}
 	else
