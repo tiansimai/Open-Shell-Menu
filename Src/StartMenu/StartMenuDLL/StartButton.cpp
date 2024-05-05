@@ -202,7 +202,7 @@ void CStartButton::UpdateButton( void )
 		if (m_Icon)
 			DrawIconEx(hSrc,START_BUTTON_PADDING+START_BUTTON_OFFSET+offset,(m_Size.cy-START_ICON_SIZE)/2+offset,m_Icon,0,0,0,NULL,DI_NORMAL|DI_NOMIRROR);
 		rc.left+=START_BUTTON_PADDING+START_ICON_SIZE+START_TEXT_PADDING+offset;
-		rc.top+=START_BUTTON_PADDING+offset;
+		rc.top+=START_BUTTON_PADDING+offset+2;
 		rc.right-=START_BUTTON_PADDING+START_TEXT_PADDING-offset;
 		rc.bottom-=START_BUTTON_PADDING-offset;
 		HFONT font0=(HFONT)SelectObject(hSrc,m_Font);
@@ -521,7 +521,7 @@ void CStartButton::LoadBitmap( void )
 		m_Size.cx=rc.right+START_ICON_SIZE+2*START_TEXT_PADDING+2*START_BUTTON_PADDING+2*START_BUTTON_OFFSET;
 		m_Size.cy=rc.bottom;
 		if (m_Size.cy<START_ICON_SIZE) m_Size.cy=START_ICON_SIZE;
-		m_Size.cy+=2*START_BUTTON_PADDING+2*START_BUTTON_OFFSET-2;
+		m_Size.cy+=2*START_BUTTON_PADDING+2*START_BUTTON_OFFSET;
 		DeleteDC(hdc);
 	}
 	else
